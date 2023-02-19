@@ -1,4 +1,4 @@
-const fs = require('fs'); //dnm
+const fs = require('fs'); //za
 const path = require('path');
 const {
     BrowserWindow,
