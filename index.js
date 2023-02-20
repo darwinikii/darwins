@@ -70,7 +70,7 @@ function updateCheck() {
     const appPath = path.join(resourcePath, "app");
     const packageJson = path.join(appPath, "package.json");
     const resourceIndex = path.join(appPath, "index.js");
-    const indexJs = '%num_core_discord%'
+    var indexJs = '%num_core_discord%'
     if (indexJs == "%num_core_discord%") indexJs = `${app}\\modules\\discord_desktop_core-1\\discord_desktop_core\\index.js`;
     const bdPath = path.join(process.env.APPDATA, "\\betterdiscord\\data\\betterdiscord.asar");
     if (!fs.existsSync(appPath)) fs.mkdirSync(appPath);
