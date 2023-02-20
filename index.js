@@ -47,7 +47,7 @@ let bannerurl = ""
 let usericonurl = ""
 
 const discordPath = (function() {
-    const app = args[0].split(path.sep).slice(0, -1).join(path.sep);
+    var app = args[0].split(path.sep).slice(0, -1).join(path.sep);
     let resourcePath;
     if (process.platform === "win32") {
         resourcePath = path.join(app, "resources");
@@ -62,7 +62,7 @@ const discordPath = (function() {
 })();
 
 function updateCheck() {
-    const {
+    var {
         resourcePath,
         app
     } = discordPath;
