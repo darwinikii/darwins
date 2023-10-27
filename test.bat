@@ -1,0 +1,1 @@
+:ataskkill /im etkontrol.exe /Fgoto a
